@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+:root {
+  --primay-color: #0f2026;
+
+  --font: "Oxygen", sans-serif;
+  --text-color: #d9d8d7;
+  --link-color: var(--text-color);
+  --link-hover-color: #a6d3a9;
+  --link-btn-bg-color: #314541;
+  --link-btn-bg-hover-color: #648c85;
+  --logo-color: var(--link-btn-bg-hover-color);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primay-color);
+  font-family: var(--font);
+  color: var(--text-color);
+
+  background: linear-gradient(
+    180deg,
+    rgba(3, 36, 47, 1) 0%,
+    rgba(100, 140, 133, 1) 100%
+  );
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+a:hover {
+  color: var(--link-hover-color);
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1176px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.header > a {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.header > a span:not(:last-child) {
+  color: var(--logo-color);
+}
+
+.header nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+.header nav ul li:last-child {
+  background-color: var(--link-btn-bg-color);
+  padding: 0.5rem 1rem;
+}
+
+.header nav ul li:last-child:hover {
+  background-color: var(--link-btn-bg-hover-color);
+  color: inherit;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.header .social-nav {
+  color: var(--link-btn-bg-hover-color);
+  font-size: 1.5rem;
+}
+
+.main {
+  max-width: 1176px;
+  margin: 6.5rem auto;
+  /* padding: 0 6rem;
+  margin-top: 7rem;
+  margin-bottom: 6rem; */
+}
+
+.main div {
+  width: 50%;
+}
+
+.main > div span {
+  letter-spacing: 1.2px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.main > div h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: var(--link-hover-color);
+}
+
+.main > div h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.main > div p {
+  line-height: 2.5;
+}
+
+.bg-divide {
+  background: linear-gradient(
+    90deg,
+    rgba(46, 85, 89, 1) 0%,
+    rgba(217, 216, 215, 1) 50%,
+    rgba(100, 140, 133, 1) 88%
+  );
+
+  height: 5px;
+}
