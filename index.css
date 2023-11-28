@@ -57,6 +57,14 @@ a:hover {
   padding: 2rem 0;
 }
 
+.menu {
+  display: none;
+}
+
+.close {
+  display: none;
+}
+
 .header > a {
   font-size: 1.8rem;
   font-weight: bold;
@@ -235,6 +243,79 @@ article ul {
   gap: 1rem;
 }
 
+@media (max-width: 710px) {
+  #projects h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  article {
+    display: flex;
+    flex-flow: column;
+  }
+  article .text {
+    flex-basis: 100%;
+    order: 1;
+    margin-bottom: 1rem;
+  }
+  /* .text-box {
+    min-width: 50%;
+  } */
+
+  .header {
+    flex-flow: row-reverse;
+
+    position: relative;
+  }
+
+  .header nav {
+    position: absolute;
+
+    left: -200%;
+
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"),
+      linear-gradient(
+        180deg,
+        rgba(3, 36, 47, 1) 0%,
+        rgba(100, 140, 133, 1) 100%
+      );
+    height: 100vh;
+    min-width: 100vw;
+  }
+
+  .header nav.active {
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    -o-transform: translate(-50%);
+  }
+
+  .header nav ul {
+    flex-flow: column;
+    margin-top: 5rem;
+    gap: 2rem;
+  }
+  .menu {
+    display: block;
+    cursor: pointer;
+  }
+  .close {
+    cursor: pointer;
+  }
+  .hide {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+}
 .footer {
   background-color: var(--primary-color);
   color: var(--text-color);
@@ -269,36 +350,28 @@ article ul {
   letter-spacing: 0.5px;
 }
 
-body::-webkit-scrollbar {
-  /*width: 1em;
+html::-webkit-scrollbar {
+  width: 1rem;
+  height: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  /*box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  */ /*border-radius: 10px;
+  */ /*border: 1px solid blue;
+  */ /*width: 100px;
+  */ /*background: black;
   */
-  /* width: 1.1rem; */
-  background: linear-gradient(
-    90deg,
-    rgba(46, 85, 89, 1) 0%,
-    rgba(15, 31, 36, 0.5) 50%,
-    rgba(217, 216, 215, 1) 88%
-  );
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  background: linear-gradient(90deg, #434343, #434343 1px, #111 0, #111);
 }
 
-body::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
-  /* border: 1px solid blue; */
-  /* width: 100px; */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: var(--project-text-bg-color);
-  outline: 1px solid slategrey;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+html::-webkit-scrollbar-thumb {
+  background: #4343;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
+    inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
